@@ -1,15 +1,13 @@
 import React from "react";
+import "./App.css";
 
-const Movie = ({key, title, year, director, runTime, img}) => {
+const Movie = ({title, year, img}) => {
   return (
-    <div>
-        <p>{key}</p>
-        <h1>{title}</h1>
-        <p>{year}</p>
-        <p>{director}</p>
-        <p>{runTime}</p>
-        <img src={img}/>
-    </div>
+    <article className='movie'>
+        <h1 className='title'>{title}</h1>
+        <img className='img' src={img} alt=''/>
+        <p className='year'>{year}</p>
+    </article>
   );
 };
 
